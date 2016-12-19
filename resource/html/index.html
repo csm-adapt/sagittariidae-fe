@@ -1,0 +1,106 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Sagittariidae</title>
+
+    <script type="application/javascript"
+             src="jquery/dist/jquery.min.js"></script>
+
+    <script type="application/javascript"
+             src="bootstrap/dist/js/bootstrap.min.js"></script>
+      <link  rel="stylesheet"
+            type="text/css"
+            href="bootstrap/dist/css/bootstrap.min.css"></link>
+
+    <!-- React select has both JavaScript and CSS components.  The dependency
+         on the CLJS library pulls in the JavaScript, but we need to reference
+         the CSS explicitly for it to be loaded.
+         cf. https://github.com/cljsjs/packages/wiki/Non-JS-Assets -->
+      <link  rel="stylesheet"
+            type="text/css"
+            href="cljsjs/react-select/common/react-select.inc.css"></link>
+
+    <script type="application/javascript"
+            src="resumablejs/resumable.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Sagittariidae&nbsp;&nbsp;
+              <span class="label label-danger" style="padding-bottom: 45px">alpha</span>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><span id="nav-project-dropdown" class="nav navbar-nav"></span></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid" style="padding-top: 100px;">
+
+        <div id="sample-search">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+              <div class="col-md-12">
+                <div id="sample-search-bar"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="col-md-12">
+                <div id="sample-select-dropdown"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row"> <!-- sample detail -->
+          <div class="col-md-12" style="padding-top: 20px;">
+            <div class="col-md-offset-0 col-md-6">
+              <div style="max-height: 300px !important; overflow: auto;">
+                <div id="sample-detail-table"></div>
+              </div>
+            </div>
+            <div class="col-md-offset-0 col-md-6">
+              <div style="max-height: 300px !important; overflow: auto;">
+                <div id="sample-stage-detail-table"></div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- row: sample detail -->
+
+        <div class="row" style="padding-top: 20px;"> <!-- control bars -->
+          <div class="col-md-12">
+            <div class="col-md-6">
+              <div id="sample-stage-input-form"></div>
+            </div>
+            <div class="col-md-6">
+              <div id="sample-stage-detail-upload-form"></div>
+            </div>
+          </div>
+        </div> <!-- row: control bars -->
+
+      </div>
+
+      <!--
+      <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="navbar-text" id="status-bar" />
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <p class="navbar-text">Good morning, Dave</p>
+          </li>
+        </ul>
+      </nav>
+      -->
+
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
